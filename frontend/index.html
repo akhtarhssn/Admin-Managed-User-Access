@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBYAPAR SOLUTIONS PVT. LTD.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" title="Style" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="md:flex items-center">
+        <div
+          class="md:w-[65%] bg-[#03013B] h-[280px] md:h-screen flex justify-center items-center"
+        >
+          <div
+            class="md:max-w-[656px] md:max-h-[656px] w-full h-full p-8 md:p-0"
+          >
+            <div
+              class="bg-gradient-to-l from-indigo-900 via-opacity-0 to-transparent w-full h-full p-2 md:p-3 rounded-full"
+            >
+              <div class="bg-[#03013B] w-full h-full rounded-full p-5 md:p-16">
+                <div
+                  class="bg-gradient-to-l from-indigo-900 via-opacity-0 to-transparent w-full h-full p-2 md:p-3 rounded-full"
+                >
+                  <div
+                    class="bg-[#03013B] w-full h-full rounded-full p-5 md:p-16"
+                  >
+                    <div
+                      class="flex justify-center items-center bg-gradient-to-b from-indigo-900 via-opacity-0 to-transparent w-full h-full rounded-full"
+                    >
+                      <h1
+                        class="text-[10vw] md:text-[6vw] font-bold uppercase text-white"
+                      >
+                        Logo
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:p-20 md:w-[35%] flex justify-center p-5 mt-8 md:mt-0">
+          <form onsubmit="handleFormSubmit(event)" class="flex flex-col w-full">
+            <h2 class="text-4xl font-bold text-center mb-10 text-gray-500">
+              Admin Login
+            </h2>
+            <div class="space-y-6 mb-8">
+              <input
+                class="border border-gray-500 rounded-lg py-3 px-5 w-full focus:border-blue-600 focus:outline-none"
+                type="text"
+                name="userId"
+                placeholder="User ID"
+                required
+              />
+              <input
+                class="border border-gray-500 rounded-lg py-3 px-5 w-full focus:border-blue-600 focus:outline-none"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <input
+              class="bg-blue-700 py-4 rounded-lg font-bold text-xl text-white cursor-pointer"
+              type="submit"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
