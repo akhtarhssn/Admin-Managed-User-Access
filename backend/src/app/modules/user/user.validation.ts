@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const ZodSchema = z.object({
   body: z.object({
-    userId: z.number(),
+    userId: z.string(),
     password: z
       .string({
         invalid_type_error: "Password must be a valid string",
