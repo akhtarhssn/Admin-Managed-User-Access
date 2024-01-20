@@ -8,25 +8,30 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="user.js"></script>
+    <script>
+      const token = localStorage.getItem("token");
+      checkUserRoleAndInitializePage(token);
+    </script>
   </head>
   <body>
-    <div class="flex justify-center items-center h-screen w-screen">
+    <div
+      class="flex justify-center items-center h-screen w-screen"
+      id="user-profile"
+    >
       <div>
         <!-- Drawer -->
         <div
-          id="drawer"
-          class="fixed -right-[500px] top-0 bg-gray-600 bg-opacity-40 duration-500"
+          id="drawer-panel"
+          class="fixed -right-[500px] top-0 h-screen border w-full md:w-[420px] p-5 z-20 bg-white duration-500 z-50"
         >
-          <div class="ms-auto h-screen border w-[420px] p-5 z-20 bg-white">
-            <div class="relative">
-              <button
-                id="backButton"
-                type="button"
-                class="absolute text-black hover:text-white top-5 right-3 md:right-5 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 z-20"
-              >
-                Back
-              </button>
-            </div>
+          <div class="relative">
+            <button
+              id="backButton"
+              type="button"
+              class="absolute text-black hover:text-white top-5 right-3 md:right-5 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 z-20"
+            >
+              Back
+            </button>
           </div>
         </div>
         <!-- Drawer End -->
@@ -44,14 +49,14 @@
             <input
               type="text"
               id="large-input"
-              class="mt-2 w-full py-3 px-5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500"
+              class="mt-2 w-full py-3 px-5 text-gray-900 border border-gray-300 rounded-lg sm:text-md focus:ring-blue-500 focus:border-blue-500 bg-transparent"
             />
           </div>
           <label for="name">Photo</label>
           <div class="flex items-center justify-center w-full mt-2">
             <label
               for="dropzone-file"
-              class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+              class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer hover:bg-gray-100"
             >
               <div class="flex flex-col items-center justify-center pt-5 pb-6">
                 <svg
